@@ -120,7 +120,7 @@ int main(int argc, char **argv) {
     void *shm;
 
     // options
-    int show_info;
+    int show_info = 0;
 
     char *node = NULL;
     char *service = NULL;
@@ -200,12 +200,6 @@ int main(int argc, char **argv) {
 
     if (!hints->ep_attr->type)
         hints->ep_attr->type = FI_EP_MSG;
-
-    printf("addr:     %s:%s\n", node, service);
-    printf("provider: %s\n", hints->fabric_attr->prov_name);
-    printf("caps:     %s\n", fi_tostr(&hints->caps, FI_TYPE_CAPS));
-    printf("mode:     %s\n", fi_tostr(&hints->mode, FI_TYPE_MODE));
-    printf("ep_type:  %s\n", fi_tostr(&hints->ep_attr->type, FI_TYPE_EP_TYPE));
 
     status = fi_getinfo(fi_version(), node, service, 0, NULL, &info);
     if (status < 0) {
