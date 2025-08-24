@@ -30,7 +30,7 @@ const struct option options[] = {
 // clang-format on
 
 void show_help(char const *argv0) {
-    printf("usage: %s -n <node> -s <service>", argv0);
+    printf("usage: %s -n <node> -s <service>\n", argv0);
     printf(
         "options:\n"
         " -h, --help               Show this usage information\n"

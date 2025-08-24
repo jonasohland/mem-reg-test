@@ -1,7 +1,8 @@
 ## Memory registration issue reproducer
 
 ```
-usage: ./mem-reg-test -n <node> -s <service>options:
+usage: ./mem-reg-test -n <node> -s <service>
+options:
  -h, --help               Show this usage information
  -i, --info               Display information about the selected
                           provider and fabric and then exit.
